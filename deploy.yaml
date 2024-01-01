@@ -16,7 +16,7 @@ spec:
         app: vet
     spec:
       containers:
-      - image: vetfrank/vet:v1.0.1
+      - image: vetfrank/vet:v1.0.2
         name: vet
         resources: {}
 status: {}
