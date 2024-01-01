@@ -6,7 +6,7 @@ metadata:
   name: nginx
 spec:
   containers:
-  - image: vetfrank/vet
+  - image: vetfrank/vet:v1.0.1
     name: nginx
     resources: {}
   dnsPolicy: ClusterFirst
