@@ -1,13 +1,21 @@
-apiVersion: v1
-kind: Pod
+kind: Deployment
 metadata:
   labels:
-    run: nginx
-  name: nginx
+    app: vet
+  name: vet
 spec:
-  containers:
-  - image: vetfrank/vet:v1.0.1
-    name: nginx
-    resources: {}
-  dnsPolicy: ClusterFirst
-  restartPolicy: Always
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vet
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: vet
+    spec:
+      containers:
+      - image: vetfrank/vet:v1.0.1
+        name: vet
+        resources: {}
+status: {}
